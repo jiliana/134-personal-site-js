@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiliana Tiu Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon/flower.svg">
+</head>
+<body>
+
+    <header>
+        <a href="/"><img src="/images/favicon/J.svg" alt="Home" width="50" height="50"></a>
+        <nav>
+            <input type="checkbox">
+            <div class="ham-menu">
+                <span class="ham-line line1"></span>
+                <span class="ham-line line2"></span>
+                <span class="ham-line line3"></span>
+            </div>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#contact-me">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-splash">
+        <svg id="bg-blur-1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" opacity="0.79"><defs><filter id="bbblurry-filter1" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feGaussianBlur stdDeviation="70" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter1)"><ellipse rx="161.5" ry="164.5" cx="274.2955589094711" cy="342.84906197592846" fill="hsl(37, 99%, 67%)"></ellipse><ellipse rx="161.5" ry="164.5" cx="409.50304169180504" cy="400.35593082767514" fill="hsl(316, 73%, 52%)"></ellipse></g></svg>
+        <svg id="bg-blur-2" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" opacity="0.79"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feGaussianBlur stdDeviation="70" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter)"><ellipse rx="161.5" ry="164.5" cx="274.2955589094711" cy="342.84906197592846" fill="hsl(37, 99%, 67%)"></ellipse><ellipse rx="161.5" ry="164.5" cx="409.50304169180504" cy="400.35593082767514" fill="hsl(316, 73%, 52%)"></ellipse></g></svg>
+        <h1>Jiliana Tiu</h1>
+        <h2>Software Engineer</h2>
+        <p class="spaced-text">
+            Studying computer science at UC San Diego. 
+            Welcome to my portfolio!
+        </p> 
+        <a href="#projects" id="action-btn">View my projects</a>
+    </main>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div id="projects-list">
+            <section class="project-card">
+                <picture class="project-card-img">
+                    <img src="images/phone.webp" alt="Image of Project 1">
+                </picture>
+                <div class="project-card-content">
+                    <h2>Portfolio Site</h2>
+                    <h3>Web Project</h3>
+                    <ul class="tool-pill">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <p>You found it! On my portfolio, you can read all about my projects and experiences.</p>
+                    <a href="project-example.html"><strong>Take a closer look...</strong></a>
+                </div>
+            </section>
+            <section class="project-card">
+                <picture class="project-card-img">
+                    <img src="images/phone.webp" alt="Image of Project 2">
+                </picture>
+                <div class="project-card-content">
+                    <h2>Project 2</h2>
+                    <h3>Web Project</h3>
+                    <ul class="tool-pill">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <p>This is a short description about the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <a href="project-example.html"><strong>Take a closer look...</strong></a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <div id="about-content">
+            <picture>
+                <source srcset="images/running-girl.webp">
+                <img src="images/reading-girl.webp" alt="A doodle of a girl reading." width="300">
+            </picture>
+            <ul>
+                <li><span id="pink">Hello, hello!</span></li>
+                <li>Jiliana is currently studying Computer Science at the University of California, San Diego.</li>
+                <li>She likes drawing and eating outside.</li>
+                <li>She has experience in mobile and web dev. To view her projects,
+                    <br> 
+                    <a href="#projects"><b>click here!</b></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact-me">
+        <h2>Contact Me</h2>
+        <p class="spaced-text">Always excited to hear about new opportunities. Feel free to send me a message!</p>
+        <ul>
+            <li> 
+                <a href="https://www.linkedin.com/in/jilianatiu/" target="_blank"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="50">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg></a>
+            </li>
+            <li>
+                <a href="https://github.com/jiliana" target="_blank"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="50">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg></a></li>
+            <li>
+                
+                <a href="mailto:jatiu@ucsd.edu"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" viewBox="0 0 256 256" xml:space="preserve">
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 45 51.815 l 45 -33.87 v -1.967 c 0 -2.03 -1.646 -3.676 -3.676 -3.676 H 3.676 C 1.646 12.302 0 13.948 0 15.978 v 1.967 L 45 51.815 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        <path d="M 47.405 60.019 c -0.712 0.536 -1.559 0.804 -2.405 0.804 s -1.693 -0.268 -2.405 -0.804 L 0 27.958 v 46.064 c 0 2.03 1.646 3.676 3.676 3.676 h 82.648 c 2.03 0 3.676 -1.646 3.676 -3.676 V 27.958 L 47.405 60.019 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <section id="contact-form">
+            <h3>Get in Touch</h3>
+            <form action="mailto:jatiu@ucsd.edu" method="POST">
+                <label for="sender">Name</label>
+                <input type="text" name="sender" id="sender" required>                
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required>
+                <label for="mailBody">Message</label>
+                <textarea 
+                placeholder="Hello! My name is Jill and I think you'll be interested in this opportunity..." name="mailBody" id="mailBody" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <img src="/images/paper-boy.webp" alt="doodle of a person with paper" id="mail-illus">
+
+    </section>
+
+    <footer>
+        <a href="#" class="scroll-top">&#8593; Scroll to top</a>
+        <p>&copy; Jiliana Tiu 2023</p>
+        <p> Find me on 
+            <a href="https://www.linkedin.com/in/jilianatiu/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/jiliana" target="_blank">GitHub</a>
+            <a href="mailto:jatiu@ucsd.edu">Email</a>
+        </p>
+        <p>
+            <a target="_blank" href="https://icons8.com/icon/23038/spa-flower">Spa Flower</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </p>
+    </footer>
+    
+</body>
+</html>
