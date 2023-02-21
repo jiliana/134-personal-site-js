@@ -7,9 +7,29 @@
     <title>Native Dialogs</title>
 </head>
 <body>
-    <button>Alert</button>
-    <button>Confirm</button>
-    <button>Prompt</button>
-    <button>Safer Prompt</button>
+    <button id="alert">Alert</button>
+    <button id="confirm">Confirm</button>
+    <button id="prompt">Prompt</button>
+    <button id="safer-prompt">Safer Prompt</button>
+    <output id="output"></output>
+
+    <script>
+
+        document.getElementById('alert').addEventListener('click', function() { 
+            alert("You clicked the alert button!")
+        });
+
+        document.getElementById('confirm').addEventListener('click', function() {
+            document.getElementById('output').textContent = 'The value returned by the confirm method is : (the value)';
+        });
+
+        document.getElementById('prompt').addEventListener('click', function() {
+            prompt("Prompt: Type here!");
+        });
+
+        document.getElementById('safer-prompt').addEventListener('click', function() {
+            prompt("Safer Prompt: Type here!");
+        });
+    </script>
 </body>
 </html>
