@@ -33,18 +33,18 @@ img {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 400;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 3.5rem;
   font-weight: 400;
   margin-bottom: 40px;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 2.5rem;
   font-weight: 400;
 }
 
@@ -53,7 +53,7 @@ button:hover {
 }
 
 .spaced-text {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -257,7 +257,7 @@ nav input {
 }
 
 #main-splash > #action-btn {
-  font-size: 32px;
+  font-size: 2rem;
   border: 1px solid var(--main-text);
   border-radius: 10px;
   background-color: transparent;
@@ -358,13 +358,13 @@ nav input {
 }
 
 p {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 /* About Me */
 #about-me {
   padding: 50px 20px;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 @keyframes swinging {
@@ -408,7 +408,7 @@ p {
 
 #pink {
   color: var(--accent);
-  font-size: 36px;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -431,7 +431,7 @@ p {
   text-align: left;
   display: inline-flex;
   padding: 20px;
-  font-size: 24px;
+  font-size: 1.2rem;
   margin-top: 20px;
   gap: 20px;
   margin-bottom: 40px;
@@ -451,7 +451,7 @@ p {
 
 /* Contact Form */
 #contact-form {
-  font-size: 16px;
+  font-size: 1rem;
   border: 1px solid black;
   max-width: 300px;
   margin: auto;
@@ -492,7 +492,7 @@ p {
   border: 1px solid black;
   background-color: white;
   transition-duration: 200ms;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 #contact-form > form button:hover {
@@ -512,7 +512,7 @@ p {
   resize: none;
   height: 100px;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 #mail-illus {
@@ -532,7 +532,7 @@ footer {
 }
 
 footer * {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: white;
 }
 footer > p a:hover {
@@ -565,7 +565,7 @@ main {
 
 table {
   margin: 80px auto;
-  font-size: 24px;
+  font-size: 1.5rem;
   row-gap: 20px;
 }
 
@@ -575,8 +575,8 @@ main > h2 {
 }
 
 @media all and (max-width: 500px) {
-    #main-splash > button {
-      font-size: 20px;
+    #main-splash > #action-btn {
+      font-size: 1.2rem;
     }
   
     #mail-illus {
