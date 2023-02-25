@@ -11,36 +11,42 @@
     <button id="confirm">Confirm</button>
     <button id="prompt">Prompt</button>
     <button id="safer-prompt">Safer Prompt</button>
+    <br>
     <output id="output"></output>
 
     <script>
-        
+
         document.getElementById('alert').addEventListener('click', function() { 
-            alert("You clicked the alert button!")
+            alert("Alert pressed!")
         });
 
         document.getElementById('confirm').addEventListener('click', function() {
-            document.getElementById('output').textContent = 'The value returned by the confirm method is : (the value)';
+            let input = confirm("Do you confirm this?");
+            document.getElementById('output').textContent = `Confirm result : ${input}`;
         });
 
         document.getElementById('prompt').addEventListener('click', function() {
             let input = prompt("Prompt: Type here!");
-            if (input != "") {
-                document.getElementById('output').textContent = `The value returned by the confirm method is : ${input}`;
+            if (input == "" || input == null) {
+                document.getElementById('output').innerHTML = `User didn't enter anything`;
             }
             else {
-                document.getElementById('output').textContent = `User didn't enter anything`;
+                document.getElementById('output').innerHTML = `The value returned by the confirm method is : ${input}`;            
             }
         });
 
         document.getElementById('safer-prompt').addEventListener('click', function() {
-            prompt("Safer Prompt: Type here!");
-            let input = prompt("Prompt: Type here!");
-            if (input != "") {
-                document.getElementById('output').textContent = `The value returned by the confirm method is : ${input}`;
+            let input =  prompt("Safer Prompt: Type here!");
+            let pure_input = DOMPurify.sanitize(input);
+            if (input == "" || input == null) {
+                document.getElementById('output').innerHTML = `User didn't enter anything`;
             }
             else {
-                document.getElementById('output').textContent = `User didn't enter anything`;
+                setTimeout(() => {
+                    document.getElementById('output').innerHTML = `The value returned by the confirm method is : ${pure_input}`;
+                    console.log(pure_input);
+                }, 1000);
+                            
             }
         });
     </script>
