@@ -14,7 +14,6 @@
     <output id="output"></output>
 
     <script>
-        import './customdialog.js';
         
         document.getElementById('alert').addEventListener('click', function() { 
             alert("You clicked the alert button!")
@@ -25,11 +24,24 @@
         });
 
         document.getElementById('prompt').addEventListener('click', function() {
-            prompt("Prompt: Type here!");
+            let input = prompt("Prompt: Type here!");
+            if (input != "") {
+                document.getElementById('output').textContent = `The value returned by the confirm method is : ${input}`;
+            }
+            else {
+                document.getElementById('output').textContent = `User didn't enter anything`;
+            }
         });
 
         document.getElementById('safer-prompt').addEventListener('click', function() {
             prompt("Safer Prompt: Type here!");
+            let input = prompt("Prompt: Type here!");
+            if (input != "") {
+                document.getElementById('output').textContent = `The value returned by the confirm method is : ${input}`;
+            }
+            else {
+                document.getElementById('output').textContent = `User didn't enter anything`;
+            }
         });
     </script>
 </body>
