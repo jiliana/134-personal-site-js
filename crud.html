@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+<body>
+    <h1>My Blog</h1>
+    <button id="add-btn">Add new post</button>
+
+    <ul id="bloglist"></ul>
+
+    <dialog id="dialog">
+        <form>
+            <label for="blog-title">Title:</label><br>
+            <input type="text" id="blog-title" required>
+            <br>
+            <label for="blog-date">Date:</label><br>
+            <input type="date" id="blog-date" required>
+            <br>
+            <label for="blog-summary">Summary:</label><br>
+            <textarea id="blog-summary" rows="4" cols="20"></textarea>
+            <br>
+            <button type="button" id="cancel">Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+    </dialog>
+
+    <dialog id="delete-dialog">
+        <form>
+            <p>Delete post?</p>
+            <button type="button" id="cancel-delete">Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+    </dialog>
+
+    <script type="module" src="blog.js"></script>
+</body>
+</html>
