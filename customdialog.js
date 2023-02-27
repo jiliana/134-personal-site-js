@@ -40,6 +40,7 @@ okConfirm.addEventListener('click', () => {
 
 
 promptBtn.addEventListener('click', () => {
+    inputPrompt.value = "";
     dialogPrompt.showModal();
 });
 cancelPrompt.addEventListener('click', () => {
@@ -47,11 +48,13 @@ cancelPrompt.addEventListener('click', () => {
     dialogPrompt.close();
 });
 okPrompt.addEventListener('click', () => {
-    if (inputPrompt.value != "") {
-        output.innerText = `Prompt result : ${inputPrompt.value}`;
+
+    let pure_input = DOMPurify.sanitize(inputPrompt.value);
+    if (pure_input != "") {
+        output.innerHTML = `Prompt result : ${pure_input}`;
     }
     else {
-        output.innerText = `User didn't enter anything`;
+        output.innerHTML = `User didn't enter anything`;
     }
     dialogPrompt.close();
 });

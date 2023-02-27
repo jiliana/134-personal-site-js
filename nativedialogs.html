@@ -14,18 +14,18 @@
     <br>
     <output id="output"></output>
 
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.2/dist/purify.min.js"></script>
     <script>
-
-        document.getElementById('alert').addEventListener('click', function() { 
+        document.getElementById('alert').addEventListener('click', () => { 
             alert("Alert pressed!")
         });
 
-        document.getElementById('confirm').addEventListener('click', function() {
+        document.getElementById('confirm').addEventListener('click', () => {
             let input = confirm("Do you confirm this?");
             document.getElementById('output').textContent = `Confirm result : ${input}`;
         });
 
-        document.getElementById('prompt').addEventListener('click', function() {
+        document.getElementById('prompt').addEventListener('click', () => {
             let input = prompt("Prompt: Type here!");
             if (input == "" || input == null) {
                 document.getElementById('output').innerHTML = `User didn't enter anything`;
@@ -35,18 +35,14 @@
             }
         });
 
-        document.getElementById('safer-prompt').addEventListener('click', function() {
+        document.getElementById('safer-prompt').addEventListener('click', () => {
             let input =  prompt("Safer Prompt: Type here!");
             let pure_input = DOMPurify.sanitize(input);
             if (input == "" || input == null) {
                 document.getElementById('output').innerHTML = `User didn't enter anything`;
             }
             else {
-                setTimeout(() => {
-                    document.getElementById('output').innerHTML = `The value returned by the confirm method is : ${pure_input}`;
-                    console.log(pure_input);
-                }, 1000);
-                            
+                document.getElementById('output').innerHTML = `The value returned by the confirm method is : ${pure_input}`;                            
             }
         });
     </script>
