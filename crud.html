@@ -28,6 +28,22 @@
         </form>
     </dialog>
 
+    <dialog id="edit-dialog">
+        <form>
+            <label for="blog-title-edit">Title:</label><br>
+            <input type="text" id="blog-title-edit" required>
+            <br>
+            <label for="blog-date-edit">Date:</label><br>
+            <input type="date" id="blog-date-edit" required>
+            <br>
+            <label for="blog-summary-edit">Summary:</label><br>
+            <textarea id="blog-summary-edit" rows="4" cols="20"></textarea>
+            <br>
+            <button type="button" id="cancel-edit">Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+    </dialog>
+
     <dialog id="delete-dialog">
         <form>
             <p>Delete post?</p>
