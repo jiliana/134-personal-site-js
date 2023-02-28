@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+@media all and (max-width: 800px) {
+    body {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#sidebar {
+    margin: 20px;
+}
+
+#sidebar h1 {
+    font-size: 3rem;
+}
+
+#sidebar p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+#sidebar button {
+    margin-top: 30px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+#bloglist {
+    margin: 10px;
+    list-style: none;
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+#bloglist li {
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#bloglist h2 {
+    font-size: 2rem;
+}
+
+#bloglist time {
+    color: grey;
+}
+
+#bloglist p {
+    margin-bottom: 20px;
+}
+
+#bloglist button {
+    background-color: transparent;
+    text-align: left;
+    border: none;
+    font-size: 1rem;
+}
+
+.popup {
+    margin: auto auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.popup label {
+    color: black;
+}
+
+.popup input {
+    color: black;
+}
+
+.popup button {
+    color: black;
+}
+
+.popup textarea {
+    color: black;
+}
+
+label {
+    margin-top: 20px;
+}
