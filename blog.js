@@ -14,6 +14,9 @@ addBtn.addEventListener('click', () => {
 });
 
 cancelBtn.addEventListener('click', () => {
+    if (dialog.hasAttribute('data-index')) {
+        dialog.removeAttribute('data-index');
+    }
     dialog.close();
 });
 
@@ -40,6 +43,10 @@ form.addEventListener('submit', (event) => {
             date: date,
             summary: summary
         })
+    }
+
+    if (dialog.hasAttribute('data-index')) {
+        dialog.removeAttribute('data-index');
     }
 
     // save array to local storage
