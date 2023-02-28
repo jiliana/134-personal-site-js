@@ -4,18 +4,7 @@ const form = document.getElementById('form');
 const cancelBtn = document.getElementById('cancel');
 const blogList = document.getElementById('bloglist');
 
-var blogArray = JSON.parse(localStorage.getItem('blogArray')) || [
-    {
-        title: 'First Blog',
-        date: '2023-03-01',
-        summary: 'This is the first blog.'
-    },
-    {
-        title: 'Second Blog',
-        date: '2023-03-02',
-        summary: 'This is the second blog.'
-    }
-];
+var blogArray = JSON.parse(localStorage.getItem('blogArray'));
 
 displayBlogArray();
 
@@ -89,7 +78,9 @@ function displayBlogArray() {
 
         deleteBtn.addEventListener('click', () => {
             // delete element at index
-
+            blogArray.splice(index, 1);
+            localStorage.setItem('blogArray', JSON.stringify(blogArray));
+            displayBlogArray();
         });
 
         li.appendChild(h2);
