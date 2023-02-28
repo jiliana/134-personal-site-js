@@ -24,11 +24,13 @@ form.addEventListener('submit', (event) => {
     const summary = document.getElementById('summaryInput').value;
 
 
-    if (form.hasAttribute('data-index')) {
+    if (dialog.hasAttribute('data-index')) {
         // EDIT
         // edit blog element at index = (data-index)
-
-        
+        const index = dialog.getAttribute('data-index');
+        blogArray[index].title = title;
+        blogArray[index].date = date;
+        blogArray[index].summary = summary;
     }
     else {
         // ADD
