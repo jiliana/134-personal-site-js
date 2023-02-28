@@ -7,7 +7,7 @@ const deleteDialog = document.getElementById('delete-dialog');
 const cancelDeleteBtn = document.getElementById('cancel-delete');
 const deleteForm = document.getElementById('delete-form');
 
-var blogArray = JSON.parse(localStorage.getItem('blogArray'));
+var blogArray = JSON.parse(localStorage.getItem('blogArray')) || [];
 
 displayBlogArray();
 
@@ -71,7 +71,6 @@ form.addEventListener('submit', (event) => {
 function displayBlogArray() {
     blogList.innerHTML = '';
 
-    if (blogArray) {
         blogArray.forEach((blog, index) => {
             const li = document.createElement('li');
             const h2 = document.createElement('h2');
@@ -97,7 +96,6 @@ function displayBlogArray() {
             });
 
             deleteBtn.addEventListener('click', () => {
-                // delete element at index
                 // target the element at index when submitting form
                 deleteDialog.setAttribute('data-index', index);
                 deleteDialog.showModal();
@@ -110,7 +108,6 @@ function displayBlogArray() {
 
             blogList.appendChild(li);
         });
-    }
 
 }
 
