@@ -19,6 +19,11 @@ body {
     }
 }
 
+button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 #sidebar {
     margin: 20px;
 }
