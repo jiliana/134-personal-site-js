@@ -13,15 +13,15 @@
     <ul id="bloglist"></ul>
 
     <dialog id="dialog">
-        <form>
-            <label for="blog-title">Title:</label><br>
-            <input type="text" id="blog-title" required>
+        <form id="form">
+            <label for="title">Title:</label><br>
+            <input type="text" id="titleInput" name="title" required>
             <br>
-            <label for="blog-date">Date:</label><br>
-            <input type="date" id="blog-date" required>
+            <label for="date">Date:</label><br>
+            <input type="date" id="dateInput" name="date" required>
             <br>
-            <label for="blog-summary">Summary:</label><br>
-            <textarea id="blog-summary" rows="4" cols="20"></textarea>
+            <label for="summary">Summary:</label><br>
+            <textarea id="summaryInput" name="summary" rows="4" cols="20"></textarea>
             <br>
             <button type="button" id="cancel">Cancel</button>
             <button type="submit">Save</button>
