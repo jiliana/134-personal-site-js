@@ -103,6 +103,9 @@ button:hover {
 .popup button {
     color: black;
 }
+.popup p {
+    color: black;
+}
 
 .popup textarea {
     color: black;

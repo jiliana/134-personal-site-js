@@ -3,6 +3,9 @@ const dialog = document.getElementById('dialog');
 const form = document.getElementById('form');
 const cancelBtn = document.getElementById('cancel');
 const blogList = document.getElementById('bloglist');
+const deleteDialog = document.getElementById('delete-dialog');
+const cancelDeleteBtn = document.getElementById('cancel-delete');
+const deleteForm = document.getElementById('delete-form');
 
 var blogArray = JSON.parse(localStorage.getItem('blogArray'));
 
@@ -18,6 +21,13 @@ cancelBtn.addEventListener('click', () => {
         dialog.removeAttribute('data-index');
     }
     dialog.close();
+});
+
+cancelDeleteBtn.addEventListener('click', () => {
+    if (deleteDialog.hasAttribute('data-index')) {
+        deleteDialog.removeAttribute('data-index');
+    }
+    deleteDialog.close();
 });
 
 form.addEventListener('submit', (event) => {
@@ -93,9 +103,9 @@ function displayBlogArray() {
 
         deleteBtn.addEventListener('click', () => {
             // delete element at index
-            blogArray.splice(index, 1);
-            localStorage.setItem('blogArray', JSON.stringify(blogArray));
-            displayBlogArray();
+            // target the element at index when submitting form
+            deleteDialog.setAttribute('data-index', index);
+            deleteDialog.showModal();
         });
         li.appendChild(date);
         li.appendChild(h2);
@@ -104,6 +114,25 @@ function displayBlogArray() {
         li.appendChild(deleteBtn);
 
         blogList.appendChild(li);
+    });
+
+    deleteForm.addEventListener('submit', (event) => {
+        event.preventDefault;
+
+        // delete element at index
+        if (deleteDialog.hasAttribute('data-index')) {
+            const index = deleteDialog.getAttribute('data-index');
+            console.log(`delete ${blogArray[index].title}`)
+            blogArray.splice(index, 1);
+        }
+
+        if (deleteDialog.hasAttribute('data-index')) {
+            deleteDialog.removeAttribute('data-index');
+        }
+
+        localStorage.setItem('blogArray', JSON.stringify(blogArray));
+        displayBlogArray();
+        deleteDialog.close();
     });
 
 }
