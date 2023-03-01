@@ -10,4 +10,17 @@ Netlify URL: [https://sensational-paletas-d35b97.netlify.app/](https://sensation
 * [Simple CRUD](https://sensational-paletas-d35b97.netlify.app/crud.html)
 * [Styled CRUD](https://sensational-paletas-d35b97.netlify.app/styledcrud.html)
 
+#### Custom Dialog JS
+* customdialog.js
+    * customdialog-alert.js
+    * customdialog-confirm.js
+    * customdialog-prompt.js
+    * customdialog-const.js
+
+#### CRUD JS
+* blog.js
+    * blog-array.js
+    * blog-const.js
+    * blog-display.js
+    
 
