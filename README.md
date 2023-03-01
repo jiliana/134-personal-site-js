@@ -22,5 +22,10 @@ Netlify URL: [https://sensational-paletas-d35b97.netlify.app/](https://sensation
     * blog-array.js
     * blog-const.js
     * blog-display.js
-    
 
+#### Styled CRUD JS
+* styledblog.js
+    * styledblog-display.js
+    * blog-array.js
+    * blog-const.js
+    
