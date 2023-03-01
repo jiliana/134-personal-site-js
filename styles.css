@@ -569,6 +569,13 @@ table {
   margin: 80px auto;
   font-size: 1.5rem;
   row-gap: 20px;
+  border-spacing: 20px;
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+table ul {
+  margin: 0;
 }
 
 main > h1,
@@ -619,4 +626,13 @@ main > h2 {
   gap: 40px;
   justify-content: center;
   margin-top: 100px;
+}
+
+#project-page section {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+#project-page section h3 {
+  margin-top: 80px;
 }
