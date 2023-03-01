@@ -589,3 +589,24 @@ main > h2 {
     }
   }
   
+
+  .fade-up {
+    opacity: 0;
+  }
+
+  .fade-up.show {
+    opacity: 1;
+    transition: opacity 1000ms;
+    animation: fade-up 1000ms ease-in-out;
+  }
+
+
+
+  @keyframes fade-up {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }

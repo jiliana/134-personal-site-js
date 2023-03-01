@@ -5,6 +5,7 @@
 
 2. Visual
     - use @import for fonts in CSS instead of individual pages
+    - fade-in animations as users scroll down
 
 3. Functionality
     - Contact Form validates email before sending & alert users if email is invalid
