@@ -17,3 +17,6 @@
     - I embedded 3 Instagram posts from my rabbit's Instagram page to showcase more of my personality!
 7. Embedded Figma Interactive Prototype
     - I embedded a Figma prototype in my project page because it effectively presents my design prototype that users can interact with.
+8. Added and finalized project pages
+    - Composed content and visuals for Portfolio Site and Movie Match project pages.
+    - Includes: adding images to project cards, GIFS and embedded prototypes to project pages, project details
