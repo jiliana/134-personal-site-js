@@ -1,14 +1,19 @@
 # Changes Made
 
-1. Interactivity
-    - Let users click anywhere on the project card box to navigate to the user case page
-
-2. Visual
-    - use @import for fonts in CSS instead of individual pages
-    - fade-in animations as users scroll down
-
-3. Functionality
-    - Contact Form validates email before sending & alert users if email is invalid
-    - Contact Form formats email's subject and body using input values
-    - Embedded Instagram posts
-    - Embedded Figma interactive prototype
+1. Project Cards
+    - Before: Users must click the 'Take a closer look' text to navigate to the project's page
+    - Now: Users can click anywhere on the project card to view the project's page
+2. Importing Font
+    - Before: Import the Google font to each HTML page
+    - Now: Use @import in one shared CSS page
+3. Animations
+    - As users scroll down, the sections fade up into view
+4. Contact Form Email Validation
+    - Users are alerted if their email is invalid when submitting their form, and email is not sent
+    - Email is sent if email is valid
+5. Contact Form Formatting
+    - Email's subject and body are formatted properly using user's input values
+6. Embedded Instagram posts
+    - I embedded 3 Instagram posts from my rabbit's Instagram page to showcase more of my personality!
+7. Embedded Figma Interactive Prototype
+    - I embedded a Figma prototype in my project page because it effectively presents my design prototype that users can interact with.
