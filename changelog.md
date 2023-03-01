@@ -11,3 +11,4 @@
     - Contact Form validates email before sending & alert users if email is invalid
     - Contact Form formats email's subject and body using input values
     - Embedded Instagram posts
+    - Embedded Figma interactive prototype
