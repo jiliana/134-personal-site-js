@@ -7,6 +7,7 @@ const deleteDialog = document.getElementById('delete-dialog');
 const cancelDeleteBtn = document.getElementById('cancel-delete');
 const deleteForm = document.getElementById('delete-form');
 
+// Pre-populate data if local storage is empty
 var blogArray = JSON.parse(localStorage.getItem('blogArray')) || [
     {
         title: 'First Blog',
@@ -25,6 +26,7 @@ var blogArray = JSON.parse(localStorage.getItem('blogArray')) || [
     }
 ];
 
+// Display the blogs when page is opened
 displayBlogArray();
 
 addBtn.addEventListener('click', () => {
@@ -55,7 +57,7 @@ form.addEventListener('submit', (event) => {
 
     if (dialog.hasAttribute('data-index')) {
         // EDIT
-        // edit blog element at index = (data-index)
+        // Edit blog element at index = (data-index)
         const index = dialog.getAttribute('data-index');
         blogArray[index].title = title;
         blogArray[index].date = date;
@@ -63,7 +65,7 @@ form.addEventListener('submit', (event) => {
     }
     else {
         // ADD
-        // add blog element to array
+        // Add blog element to array
         blogArray.push({
             title: title,
             date: date,
@@ -75,11 +77,9 @@ form.addEventListener('submit', (event) => {
         dialog.removeAttribute('data-index');
     }
 
-    // save array to local storage
+    // Update local storage and display
     localStorage.setItem('blogArray', JSON.stringify(blogArray));
-
     displayBlogArray();
-
     dialog.close();
 
 });
@@ -106,16 +106,18 @@ function displayBlogArray() {
                 document.getElementById('dateInput').value = blog.date;
                 document.getElementById('summaryInput').value = blog.summary;
 
-                // target the element at index when submitting form
+                // Target the element at index when submitting form
                 dialog.setAttribute('data-index', index);
                 dialog.showModal();
             });
 
             deleteBtn.addEventListener('click', () => {
-                // target the element at index when submitting form
+                // Target the element at index when submitting form
                 deleteDialog.setAttribute('data-index', index);
                 deleteDialog.showModal();
             });
+
+            // Format blog list element
             li.appendChild(h2);
             li.appendChild(date);
             li.appendChild(p);
@@ -130,7 +132,7 @@ function displayBlogArray() {
 deleteForm.addEventListener('submit', (event) => {
     event.preventDefault;
 
-    // delete element at index
+    // Delete element at index
     if (deleteDialog.hasAttribute('data-index')) {
         const index = deleteDialog.getAttribute('data-index');
         blogArray.splice(index, 1);
@@ -140,6 +142,7 @@ deleteForm.addEventListener('submit', (event) => {
         deleteDialog.removeAttribute('data-index');
     }
 
+    // Update local storage and display
     localStorage.setItem('blogArray', JSON.stringify(blogArray));
     displayBlogArray();
     deleteDialog.close();

@@ -48,7 +48,6 @@ cancelPrompt.addEventListener('click', () => {
     dialogPrompt.close();
 });
 okPrompt.addEventListener('click', () => {
-
     let pure_input = DOMPurify.sanitize(inputPrompt.value);
     if (pure_input != "") {
         output.innerHTML = `Prompt result : ${pure_input}`;
